@@ -1,0 +1,265 @@
+/* Sidebar styles for large screens */
+#sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#page-content-wrapper {
+  margin-left: 250px;
+  padding-top: 60px; /* Menyesuaikan dengan tinggi header */
+}
+
+@media (max-width: 992px) {
+  #page-content-wrapper {
+      margin-left: 0;
+  }
+}
+
+.logout {
+  margin-left: auto; /* Posisi tombol logout ke kanan */
+  background-color: #f1c40f; /* Warna kuning */
+  color: black;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.logout:hover {
+  background-color: #d4ac0d; /* Warna kuning gelap saat hover */
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar background gradient */
+.bg-gradient-primary {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+.bg-gradient-blue {
+  background: linear-gradient(45deg, #1e90ff, #00bfff); /* Warna biru */
+}
+
+.bg-gradient-green {
+  background: linear-gradient(45deg, #32cd32, #3cb371); /* Warna hijau */
+}
+
+.bg-gradient-red {
+  background: linear-gradient(45deg, #ff4500, #ff6347); /* Warna merah */
+}
+
+/* Profile image */
+.profile-img img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+/* Full-width header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Card hover */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.skills {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skills h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+  position: relative;
+}
+
+.progress {
+  background-color: #007bff;
+  height: 100%;
+  text-align: right;
+  color: white;
+  padding-right: 5px;
+  line-height: 20px;
+  border-radius: 8px 0 0 8px;
+}
+
+.jarak {
+  margin-bottom: 20px; /* Jarak di bawah elemen */
+  padding: 10px; /* Opsional: Memberi ruang dalam elemen */
+}
+
+.offcanvas {
+  max-width: 250px; /* Sesuaikan dengan lebar sidebar */
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Responsif */
+form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form input {
+  flex: 1;
+  padding: 8px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #006eff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Tabel Responsif */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.table-responsive {
+  overflow-x: auto; /* Scroll horizontal untuk perangkat kecil */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsivitas */
+@media screen and (max-width: 768px) {
+  .container {
+      margin: 20px;
+      padding: 10px;
+  }
+
+  form {
+      gap: 5px;
+  }
+
+  form div {
+      flex-direction: column;
+  }
+
+  form input {
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+
+  table th, table td {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  table td {
+      word-break: break-word;
+      white-space: normal;
+  }
+
+  button {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+      font-size: 24px;
+  }
+
+  form input {
+      font-size: 14px;
+  }
+
+  button {
+      padding: 8px 14px;
+      font-size: 14px;
+  }
+
+  table th, table td {
+      font-size: 12px;
+      padding: 6px;
+  }
+
+  table td {
+      word-break: break-word;
+      white-space: normal;
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}

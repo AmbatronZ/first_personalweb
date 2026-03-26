@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/admin.site/admincss.css">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="bg-gradient-primary text-white d-none d-lg-block" id="sidebar">
+            <h3 class="text-center my-3">Menu</h3>
+            <ul class="nav flex-column mt-4">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#profile"><i class="fas fa-user-circle"></i> Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#projects"><i class="fas fa-folder"></i> Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#skills"><i class="fas fa-code"></i> Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#contact"><i class="fas fa-envelope"></i> Add Client Info</a>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Offcanvas Sidebar for mobile -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar-offcanvas" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body bg-gradient-primary text-white">
+                <ul class="list-unstyled">
+                    <li><a href="#profile" class="text-white text-decoration-none d-block py-2" data-bs-dismiss="offcanvas">Profile</a></li>
+                    <li><a href="#projects" class="text-white text-decoration-none d-block py-2" data-bs-dismiss="offcanvas">Projects</a></li>
+                    <li><a href="#skills" class="text-white text-decoration-none d-block py-2" data-bs-dismiss="offcanvas">Skills</a></li>
+                    <li><a href="#contact" class="text-white text-decoration-none d-block py-2" data-bs-dismiss="offcanvas">Add Client Info</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <header class="bg-dark text-white py-3 px-4 shadow-sm d-flex align-items-center">
+                <button class="btn btn-outline-light me-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar-offcanvas" aria-controls="sidebar-offcanvas">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2 class="m-0">Welcome to My Dashboard</h2>
+                <button class="btn btn-warning logout ms-auto" onclick="window.location.href='web.baru.html'">Log out</button>
+                </div>
+            </header>
+            <div class="container mt-4">
+                <!-- Profile, Stats, Projects, Skills, Contact -->
+        <!-- Profile tabel -->
+        <section id="profile" class="mb-5 text-center">
+                <div class="profile-img mx-auto mb-3">
+                <img src="/image/fotodiri.jpg" alt="Profile Picture" class="rounded-circle shadow">
+                  </div>
+                  <h3>Aldino Maytata Prandila</h3>
+                  <p class="text-muted">Web Developer | Designer | Game Developer</p>
+                  <p>Welcome In My Admin Site, 5 month Experience At Informatics, Nothing Special Here...</p>
+              </section>
+            
+              <!-- statistik -->
+              <div class="row text-center">
+                  <div class="col-md-4">
+                      <div class="card bg-gradient-blue text-white shadow">
+                          <div class="card-body">
+                              <i class="fas fa-project-diagram fa-2x"></i>
+                              <h4>Projects Done</h4>
+                              <p class="fs-5">15</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card bg-gradient-green text-white shadow">
+                          <div class="card-body">
+                              <i class="fas fa-laptop-code fa-2x"></i>
+                              <h4>Skills</h4>
+                              <p class="fs-5">10</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card bg-gradient-red text-white shadow">
+                        <div class="card-body">
+                            <i class="fas fa-envelope-open-text fa-2x"></i>
+                            <h4>Client Requests</h4>
+                            <p class="fs-5" id="clientRequestsCount">0</p>
+                        </div>
+                    </div>
+                </div>                
+              </div>
+
+              <!-- Projects tabel -->
+              <section id="projects" class="mt-5">
+                  <h3>Projects</h3>
+                  <div class="row">
+                      <div class="col-md-4">
+                          <div class="card shadow">
+                              <img src="/image/ambashop.jpg" class="card-img-top" alt="Project 1">
+                              <div class="card-body">
+                                  <h5 class="card-title">Project 1</h5>
+                                  <p class="card-text">Banner toko desain grafis</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card shadow">
+                              <img src="/image/ambashop2.jpg" class="card-img-top" alt="Project 2">
+                              <div class="card-body">
+                                  <h5 class="card-title">Project 2</h5>
+                                  <p class="card-text">Biaya administrasi toko dengan desain grafis</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card shadow">
+                              <img src="/image/ambashop3.jpg" class="card-img-top" alt="Project 3">
+                              <div class="card-body">
+                                  <h5 class="card-title">Project 3</h5>
+                                  <p class="card-text">Logo</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+
+              <!-- Skills tabel -->
+              <section id="skills" class="mt-5">
+                  <h3>Skills</h3>
+                  <span>HTML</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 45%;">45%</div>
+            </div>
+        <div class="skill">
+            <span>CSS</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%;">65%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 15%;">15%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>C</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 30%;">30%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>Cap-cut</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%;">80%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>IbisPaint X</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 92%;">92%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>Pixellab</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 98%;">98%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>Canva</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%;">80%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>Alight Motion</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%;">65%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>Godot Engine 4</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 20%;">20%</div>
+            </div>
+        </div>
+              </section>
+
+              <!-- Contact tabel -->
+              <section id="contact" class="mt-5">
+                <div class="container">
+                    <h1>Add Client Info</h1>
+                    <form id="crudForm">
+                      <input type="hidden" id="dataId" value="">
+                      <div>
+                        <label for="name">Name Client :</label>
+                        <input type="text" id="name" placeholder="Masukkan Nama" required>
+                      </div>
+                      <div>
+                        <label for="hobby">Client Order :</label>
+                        <input type="text" id="order" placeholder="Masukkan pesanan" required>
+                      </div>
+                      <div>
+                        <label for="age">Whatapps Client:</label>
+                        <input type="text" id="whatapps" placeholder="Masukkan Nomor WhatsApps" required>
+                      </div>
+                      <button type="submit">Simpan</button>
+                    </form>
+                    <div class="table-responsive mt-4">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nama</th>
+                                    <th>Pesanan</th>
+                                    <th>WhatsApp</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTable"></tbody>
+                        </table>
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+ <div class="jarak"><p></p> </div>  <!--cara mudah untuk ngemarging/ memberi jarak antara content dan footer-->
+    <script src="/admin.site/admin.java"></script>
+</body>
+<footer class="footer">
+    <p>Copyright © <b>Ambatronz.</b> | All Rights Reserved</p>
+    <p>Made By : Aldino Maytata P.</p> 
+</footer>
+</html>

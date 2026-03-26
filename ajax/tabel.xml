@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FootballPlayers>
+    <Player>
+        <Name>Lamine Yamal</Name>
+        <Club>FC Barcelona</Club>
+        <Age>16</Age>
+    </Player>
+    <Player>
+        <Name>Alejandro Garnacho</Name>
+        <Club>Manchester United</Club>
+        <Age>19</Age>
+    </Player>
+    <Player>
+        <Name>Warren Zaire-Emery</Name>
+        <Club>Paris Saint-Germain</Club>
+        <Age>17</Age>
+    </Player>
+    <Player>
+        <Name>Joao Neves</Name>
+        <Club>Benfica</Club>
+        <Age>19</Age>
+    </Player>
+    <Player>
+        <Name>Mathys Tel</Name>
+        <Club>Bayern Munich</Club>
+        <Age>19</Age>
+    </Player>
+    <Player>
+        <Name>Youssoufa Moukoko</Name>
+        <Club>Borussia Dortmund</Club>
+        <Age>19</Age>
+    </Player>
+    <Player>
+        <Name>Gavi</Name>
+        <Club>FC Barcelona</Club>
+        <Age>19</Age>
+    </Player>
+    <Player>
+        <Name>Arda Guler</Name>
+        <Club>Real Madrid</Club>
+        <Age>19</Age>
+    </Player>
+    <Player>
+        <Name>Antonio Nusa</Name>
+        <Club>Club Brugge</Club>
+        <Age>18</Age>
+    </Player>
+    <Player>
+        <Name>Rico Lewis</Name>
+        <Club>Manchester City</Club>
+        <Age>19</Age>
+    </Player>
+    <Player>
+        <Name>Facundo Buonanotte</Name>
+        <Club>Brighton</Club>
+        <Age>19</Age>
+    </Player>
+    <Player>
+        <Name>Oscar Gloukh</Name>
+        <Club>Red Bull Salzburg</Club>
+        <Age>20</Age>
+    </Player>
+    <Player>
+        <Name>Arthur Vermeeren</Name>
+        <Club>Atletico Madrid</Club>
+        <Age>20</Age>
+    </Player>
+    <Player>
+        <Name>Desire Doue</Name>
+        <Club>Stade Rennais</Club>
+        <Age>19</Age>
+    </Player>
+    <Player>
+        <Name>Karim Konate</Name>
+        <Club>Red Bull Salzburg</Club>
+        <Age>20</Age>
+    </Player>
+    <Player>
+        <Name>Jeanel Belocian</Name>
+        <Club>Stade Rennais</Club>
+        <Age>19</Age>
+    </Player>
+    <Player>
+        <Name>Lucas Bergvall</Name>
+        <Club>Djurgarden</Club>
+        <Age>18</Age>
+    </Player>
+    <Player>
+        <Name>Francesco Camarda</Name>
+        <Club>AC Milan</Club>
+        <Age>16</Age>
+    </Player>
+    <Player>
+        <Name>Guillaume Restes</Name>
+        <Club>Toulouse</Club>
+        <Age>18</Age>
+    </Player>
+    <Player>
+        <Name>Roony Bardghji</Name>
+        <Club>FC Copenhagen</Club>
+        <Age>18</Age>
+    </Player>
+</FootballPlayers>

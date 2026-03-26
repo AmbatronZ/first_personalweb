@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish List Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+            display: none; 
+        }
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+        table th {
+            background-color: #007BFF;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #006eff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #333;
+        }
+        .btn:hover {background-color: #006eff}
+        .btn:active {
+            background-color: #333;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <h2>ALL MY WISHLIST GAMES</h2>
+    <button type="button" onclick="loadDoc()" class="btn">OPEN</button>
+    <br><br>
+    <div class="table-container">
+        <table id="demo">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>CLUB</th>
+                    <th>AGE</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function loadDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                myFunction(this);
+            };
+            xhttp.open("GET", "tabel.xml");
+            xhttp.send();
+        }
+
+        function myFunction(xml) {
+            const xmlDoc = xml.responseXML;
+            const players = xmlDoc.getElementsByTagName("Player");
+            let table = "";
+            for (let i = 0; i < players.length; i++) {
+                const name = players[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue;
+                const club = players[i].getElementsByTagName("Club")[0].childNodes[0].nodeValue;
+                const age = players[i].getElementsByTagName("Age")[0].childNodes[0].nodeValue;
+                table += `<tr>
+                            <td>${name}</td>
+                            <td>${club}</td>
+                            <td>${age}</td>
+                          </tr>`;
+            }
+            document.querySelector("#demo tbody").innerHTML = table;
+            document.querySelector("#demo").style.display = "table";
+        }
+    </script>
+</body>
+</html>

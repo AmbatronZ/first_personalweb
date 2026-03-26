@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>3124521013</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-image: url("/image/musasi.jpeg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(30, 90, 255);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar li {
+            margin: 0 15px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: rgb(20, 70, 200);
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            color: white;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+        }
+        .content {
+            flex: 1;
+            padding-top: 60px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            padding: 50px;
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+        }
+        .home-content {
+            flex: 1;
+            max-width: 60%;
+        }
+        .home-content h3 {
+            font-size: 42px;
+        }
+        .home-content h1 {
+            font-size: 62px;
+            line-height: 1.2;
+        }
+        .home-content p {
+            font-size: 18px;
+            margin: 25px 0 30px;
+        }
+        .foto-home {
+            flex: 1;
+            max-width: 30%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .foto-home img {
+            width: 100%;
+            height: auto;
+            border-radius: 5%;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar.active ul {
+                display: flex;
+            }
+            .navbar li {
+                margin: 10px 0;
+                width: 100%;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .home {
+                flex-direction: column;
+            }
+            .home-content, .foto-home {
+                max-width: 100%;
+                text-align: center;
+            }
+            .foto-home img {
+                margin-top: 20px;
+            }
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(30, 90, 255);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(30, 90, 255);
+        }
+
+        /* Tombol menu untuk tampilan mobile */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            color: white;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+        }
+
+        .content {
+            flex: 1;
+            padding-top: 60px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 50px;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar ul {
+                display: none; /* Sembunyikan menu di mobile */
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navbar.active ul {
+                display: flex; /* Tampilkan menu ketika navbar aktif */
+            }
+            .navbar li {
+                margin: 10px 0;
+                width: 100%; /* Buat setiap item menu penuh lebar */
+            }
+            .menu-toggle {
+                display: block; /* Tampilkan tombol menu di mobile */
+            }
+            .content {
+                padding: 10px;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+
+        table {
+            font-family:'poppins', sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #FFFFFF;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .kuisoiner {
+            background-color: rgb(124, 213, 255);
+            color: white;
+            border: 2px solid black;
+            margin: 20px 0;
+            padding: 20px;
+            width: 95%;
+            height: auto;
+            border-radius: 8px;
+            background-image: url("/image/samurai.png");
+            background-repeat: no-repeat;  
+            background-size: 80% 100%;
+            background-position: right top;
+        }
+
+        iframe {
+            max-width: 100%;
+            height: auto;
+        }
+        .bg-penghargaan {
+            background-color: rgb(254, 254, 255);
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+            margin: 20px 0;
+            padding: 20px;
+            width: 95%;
+            height: 1000px;
+            border-radius: 8px;
+        }
+        .kontak {
+            background-color: rgb(173, 96, 255);
+            font-family:'poppins',sans-serif;
+            border: 2px solid black;
+            margin: 20px 0;
+            padding: 20px;
+            width: 95%;
+            height: auto;
+        border-radius: 8px;}
+
+        .footer {
+            background-color: black; 
+            color: white; 
+            text-align: center; 
+            padding: 10px 0; 
+            width: 100%; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h1 style="color: white;">MAIN MENU</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+    <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Biodata">Biodata</a></li>
+        <li><a href="#Achievment">Achievment</a></li>
+        <li><a href="#contact_me">Contact</a></li>
+        <li><a href="/login.html">Login Admin</a></li>
+    </ul>
+</div>
+
+<div class="content">
+    <section id="Home" class="home">
+        <div class="home-content">
+            <h3>Hi WELCOME IN MY PERSONAL WEB</h3>
+            <h1>I'm <span>Aldino<br></span> a Frontend Developer</h1>
+            <p>Nama saya Aldino Maytata Prandila, saya mahasiswa Politeknik Elektronika Negeri Surabaya, jurusan teknik informatika. Saya sangat hobi bermain game, berolahraga, dan menggambar. Saya memiliki ketertarikan besar dalam dunia game dan bercita-cita menjadi seorang Game Developer.</p>
+        </div>
+        <div class="foto-home">
+            <img src="/image/fotodiri.jpg" alt="Foto Aldino">
+        </div>
+    </section>
+    <!-- Bagian lain tetap sama -->
+    <section id="Biodata">
+        <h1 style="text-align:center;">Welcome In My Biodata</h1>
+        <img src="/image/foto.jpg" alt="You" style="width: 20%; display:block; margin: 0 auto; border-radius:20%">
+        <h2 style="text-align:center;">BIODATA DIRI</h2>
+
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td>Aldino Maytata Prandila</td>
+            </tr>
+            <tr>
+                <td>NRP</td>
+                <td>3124521014</td>
+            </tr>
+            <tr>
+                <td>Prodi</td>
+                <td>Teknik Informatika</td>
+            </tr>
+            <tr>
+                <td>Asal Sekolah</td>
+                <td>SMA NEGERI 1 BABAT</td>
+            </tr>
+            <tr>
+                <td>Tempat Tanggal Lahir</td>
+                <td>Tuban 26 Mei 2006</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>Jl Raya Babat No 64 RT/RW 03/02</td>
+            </tr>
+            <tr>
+                <td>Hobi</td>
+                <td>Music,Menggambar, Nonton film, Game, Olahraga</td>
+            </tr>
+            <tr>
+                <td>Cita-Cita</td>
+                <td>Menjadi GAMEDEV & Memenangkan GOTY</td>
+            </tr>
+        </table>
+
+        <h2 style="text-align:center;">Riwayat Pendidikan</h2>
+
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>  
+                <td>Sekolah Dasar</td>
+                <td>SD NEGERI BABAT 7</td> 
+            </tr>
+            <tr>
+                <td>Sekolah Menengah Pertama</td>
+                <td>Mts Negeri 1 Lamongan</td>
+            </tr>
+            <tr>
+                <td>Sekolah Menengah Atas</td>
+                <td>SMA Negeri 1 Babat</td>
+            </tr>
+            <tr>
+                <td>Perguruan Tinggi</td>
+                <td>Politeknik Elektronika Negeri Surabaya</td>
+            </tr>
+        </table>
+
+        <div class="kuisoiner">
+            <h1>Video Perkenalan Singkat.</h1>
+            <iframe src="https://www.youtube.com/embed/Uh1wQFQZ1Ww?autoplay=1&mute=1" frameborder="5" allowfullscreen></iframe>
+            <h2>Kuisoiner tanya jawab</h2>
+            <form action="/action_page.php">
+                <label for="fname">Enter your name:</label><br>
+                <input type="text" id="fname" name="fname"><br><br>
+                <p>Enter your <strong>gender</strong>:</p>
+                <input type="checkbox" id="gender1" name="gender1" value="Boy">
+                <label for="gender1"> Male </label><br>
+                <input type="checkbox" id="gender2" name="gender2" value="Girl">
+                <label for="gender2"> Female </label><br>
+                <p>Question</p>
+                <textarea name="message" rows="10" cols="40"></textarea>
+                <br><br>
+                <label for="email">Enter your email so we can reply soon:)</label><br>
+                <input type="text" id="email" name="email"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <p style="text-align:center;color:gold;">Always Remember You Don't Have Enemies.</p>
+    </section>
+    <section id="Achievment">
+       <div class="bg-penghargaan">
+        <style>
+            .kelap-kelip{
+                font-size: 48px;
+                text-align: center;
+                animation: flicker 1.5s infinite alternate;
+            }
+    
+            @keyframes flicker {
+                0% { color: red; }
+                20% { color: orange; }
+                40% { color: yellow; }
+                60% { color: green; }
+                80% { color: blue; }
+                100% { color: violet; }
+            }
+        </style>    
+        <h1 class="kelap-kelip">Sorry Achievement will post as soon as possible:V </h1>
+        <img src="/image/arisu.gif" alt="You" style="width: 20%; display:block; margin: 0 auto; border-radius:20%">
+
+</div>
+</section>
+    <section id="contact_me">
+        <div class="kontak">
+            <style>
+                .my-text h2 {
+                    color: rgb(0, 0, 0); 
+                }
+                .my-text p {
+                    color: rgb(255, 255, 255); 
+                }
+                .icon {
+            display: flex; 
+            align-items: center; /* Menyejajarkan gambar secara vertikal */
+            flex-wrap: wrap; /* Agar gambar bisa berpindah ke baris berikutnya jika tidak muat */
+            margin: 20px;
+        }
+        .icon img {
+            max-width: 200px; /* Mengatur lebar maksimum gambar */
+            margin: 10px; /* Jarak antar gambar */
+        }
+            </style> 
+            <div class="my-text">
+            <h2 style="text-align: center;">My Contact Person & Social Media</h2> 
+            <p>Contact Person:</p>
+            <p>Email: aldinomaytatap@gmail.com</p>
+            <p>No Telpon: 082330427191</p>
+            <p>Social Media:</p>
+            <div class="icon">
+                 <a href="https://youtube.com/@ambatronzgamedev593?si=ec88FkYQcRpYASCf"><img src="/image/ytp.png" alt="YT" style="width: 40px;height:auto;"></a>
+                 <a href="defa"><img src="/image/ig.png" alt="ig" style="width:42px;height:42px;"></a>
+                 <a href="https://wa.me/+6282330427191"><img src="/image/wa.png" alt="wa" style="width: 40px;height:auto;"></a>
+                 <a href="https://steamcommunity.com/profiles/76561199713706721/"><img src="/image/stim.png" alt="steam" style="width: 40px;height:auto;"></a>
+                </div>
+             </div>
+        </div>
+
+    </section>
+</div>
+
+
+<footer class="footer">
+    <p>Copyright © Ambatronz. | All Rights Reserved</p>
+    <p>Made By : Aldino Maytata P.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

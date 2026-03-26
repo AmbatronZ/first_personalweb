@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AmbatronZ.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+
+
+</head>
+<style>
+  .sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom right, rgb(47, 47, 47), rgb(0, 0, 0));
+  font-family: 'Tektur', sans-serif;
+  font-size: 20px;
+}
+.navbar {
+  background: linear-gradient(45deg, rgb(135, 19, 19), rgb(255, 0, 0));
+  height: 120px;
+  font-family: 'Tektur',sans-serif;
+  font-size: 20px;
+}
+.navbar-brand {
+  font-weight: bold;
+  color: #ffffff;
+}
+.navbar-nav .nav-link {
+  color: #ffffff;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #ffdd57;
+}
+.dropdown-menu {
+  background-color: #4e54c8;
+  border: none;
+}
+.dropdown-menu .dropdown-item {
+  color: #ffffff;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #ffdd57;
+  color: #000000;
+}
+.btn-custom {
+  background-color: #ffdd57;
+  color: #000000;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+.btn-custom:hover {
+  background-color: #ffe884;
+  color: #000000;
+}
+.hero {
+background-size: cover;
+background-position: center;
+height: 500px;
+color: white;
+text-align: center;
+padding: 100px 20px;
+font-family: 'Tektur';
+}
+
+.hero h1 {
+font-size: 48px;
+font-weight: bold;
+}
+
+.hero span {
+color: #ff0000;
+}
+
+.carousel-text-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+text-align: center;
+z-index: 10;
+font-family: 'Tektur';
+padding: 20px;
+width: 100%;
+}
+
+.carousel-text-overlay h1 {
+font-size: 48px;
+font-weight: bold;
+}
+
+.carousel-text-overlay span {
+color: #ff0000;
+}
+
+.carousel-inner img {
+height: 500px;
+object-fit: cover;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow">
+  <div class="container">
+    <a class="navbar-brand">Nexus<span>Play</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">F2P Games</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">All Games</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categories
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="ajax/ajax.html">Strategy</a></li>
+            <li><a class="dropdown-item" href="#">Casual</a></li>
+            <li><a class="dropdown-item" href="#">Puzzle</a></li> 
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Other</a></li>  
+          </ul>
+        </li>        
+        <li class="nav-item">
+          <a class="nav-link" href="#">User Community/Feedback</a>
+        </li>
+        
+      </ul>
+      <a href="/Launcher/Login-Page/LoginPage.html" class="btn btn-custom ms-3">Login User</a>
+    </div>
+  </div>
+</nav>
+
+<div class="d-flex">
+  <!-- Sidebar -->
+
+<div class="sidebar vh-100 d-flex flex-column p-3 text-white">
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item mb-2">
+      <a href="#" class="nav-link text-white">
+        <i class="bi bi-person-circle me-2"></i> Profile
+      </a>
+    </li>
+    <li class="nav-item mb-2">
+      <a href="#" class="nav-link text-white">
+        <i class="bi bi-controller me-2"></i> Library
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  <!-- Content area -->
+  <div class="flex-grow-1 p-4">
+    <div style="position: relative;">
+      <!-- Teks statis di atas carousel -->
+      <div class="carousel-text-overlay">
+        <h1><span>Nexus</span> Play</h1>
+        <p>Cari semua harta karun karya anak bangsa, dengan lebih dari +1000 aplikasi dengan DRM-free</p>
+        <a href="#" class="btn btn-custom">Browse</a>
+      </div>
+    
+      <!-- Carousel gambar -->
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/image/Header_1.jpg" class="d-block w-100" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="/image/Header_1.jpg" class="d-block w-100" alt="Slide 2">
+          </div>
+        </div>
+    
+        <!-- Tombol navigasi -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+<!-- Optional JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
